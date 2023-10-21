@@ -6,11 +6,11 @@ import { Error404PageComponent } from './shared/pages/error404-page/error404-pag
 const routes: Routes = [
   {
     path: 'auth',
-    loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule ),
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
   },
   {
     path: 'heroes',
-    loadChildren: () => import('./heroes/heroes.module').then( m => m.HeroesModule ),
+    loadChildren: () => import('./heroes/heroes.module').then(m => m.HeroesModule),
   },
   {
     path: '404',
@@ -29,6 +29,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+
 })
 export class AppRoutingModule { }
